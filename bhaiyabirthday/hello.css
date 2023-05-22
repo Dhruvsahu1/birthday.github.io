@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.gallery{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    transform-style: preserve-3d;
+    animation: animate 60s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.gallery span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg))translatez(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004) ;
+    
+}
+.gallery span image{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+img{
+    height: 25vh;
+    width: 25vh;
+}
+.gallery span:hover img{
+    transform: translateY(-50px);
+    transition: 2s;
+}
+.gallery span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 2s;
+}
+.music {
+    position: absolute;
+    bottom: 10%;
+    justify-content: last baseline;
+    
+}
+.music source{
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    width: 20%;
+    height: 10%;
+}

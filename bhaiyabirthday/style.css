@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+}
+nav ul{
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    text-decoration: none;
+    padding: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer{
+    height: 88px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    marker: none;
+    justify-content: flex-start;
+}
+.foot02 img{
+    height: 5vh;
+    text-decoration: none;
+    marker: none;
+    padding: 0 20px;
+    
+}
